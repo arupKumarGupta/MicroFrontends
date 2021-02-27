@@ -1,5 +1,5 @@
-import {mount} from 'products/ProductsIndex';
-import cartMount from 'cart/CartSummary';
-mount(document.getElementById('products'));
-cartMount(document.getElementById('cart'));
+import  {mount as productMount} from 'products/ProductsIndex';
+import {mount as cartMount} from 'cart/CartSummary';
+productMount(document.getElementById('host-products'));
+cartMount(document.getElementById('host-cart'));
 console.log('container');
