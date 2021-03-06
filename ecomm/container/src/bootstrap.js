@@ -1,5 +1,10 @@
 import  {mount as productMount} from 'products/ProductsIndex';
 import {mount as cartMount} from 'cart/CartSummary';
-productMount(document.getElementById('host-products'));
-cartMount(document.getElementById('host-cart'));
+const hostProducts = document.createElement('div');
+hostProducts.classList.add('host-products');
+document.body.appendChild(hostProducts);
+const hostCart= document.createElement('div');
+hostProducts.classList.add('host-cart');
+document.body.appendChild(hostCart);
+cartMount(hostCart);
 console.log('container');
